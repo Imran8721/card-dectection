@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Detection</title>
+
+  <!-- Include p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <!-- Include ml5.js library for object detection -->
+  <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    #canvas-container {
+      position: relative;
+      display: inline-block;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+    .details {
+      font-size: 18px;
+      margin-top: 10px;
+      color: red;
+      text-align: left;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Card Detection</h1>
+  
+  <!-- Canvas container for p5.js canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- Div for displaying details below the canvas -->
+  <div class="details">
+    <div id="widthDetails"></div>
+    <div id="heightDetails"></div>
+    <div id="realWidthDetails"></div>
+    <div id="realHeightDetails"></div>
+    <div id="confidenceDetails"></div>
+  </div>
+
+  <!-- Include the app.js script that will handle the object detection -->
+  <script src="app.js"></script>
+</body>
+</html>
